@@ -51,6 +51,7 @@
         <!--工作流配置-->
         <warm-flow.version>1.6.8</warm-flow.version>
 
+
         <!-- 插件版本 -->
         <maven-jar-plugin.version>3.2.2</maven-jar-plugin.version>
         <maven-war-plugin.version>3.2.2</maven-war-plugin.version>
@@ -238,6 +239,13 @@
                 <groupId>p6spy</groupId>
                 <artifactId>p6spy</artifactId>
                 <version>${p6spy.version}</version>
+            </dependency>
+
+            <!-- 人大金仓数据库驱动 -->
+            <dependency>
+                <groupId>cn.com.kingbase</groupId>
+                <artifactId>kingbase8</artifactId>
+                <version>8.6.0</version>
             </dependency>
 
             <!--  AWS SDK for Java 2.x  -->
