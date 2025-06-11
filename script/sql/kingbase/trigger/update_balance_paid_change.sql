@@ -6,7 +6,7 @@ DROP TRIGGER IF EXISTS update_balance_paid_change ON project_balance_paid;
 DROP FUNCTION IF EXISTS update_balance_paid_change_func();
 
 -- 创建触发器函数
-CREATE OR REPLACE FUNCTION "ry-vue".update_balance_paid_change_func()
+CREATE OR REPLACE FUNCTION update_balance_paid_change_func()
 RETURNS TRIGGER AS $$
 BEGIN
 
@@ -490,4 +490,4 @@ $$ LANGUAGE plpgsql;
 CREATE TRIGGER update_balance_paid_change
     AFTER UPDATE ON project_balance_paid
     FOR EACH ROW
-    EXECUTE FUNCTION "ry-vue".update_balance_paid_change_func();
+    EXECUTE FUNCTION update_balance_paid_change_func();

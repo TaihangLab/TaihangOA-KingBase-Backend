@@ -6,7 +6,7 @@ DROP TRIGGER IF EXISTS update_balance_unpaid_sum_change ON project_balance_unpai
 DROP FUNCTION IF EXISTS update_balance_unpaid_sum_change_func();
 
 -- 创建触发器函数
-CREATE OR REPLACE FUNCTION "ry-vue".update_balance_unpaid_sum_change_func()
+CREATE OR REPLACE FUNCTION update_balance_unpaid_sum_change_func()
 RETURNS TRIGGER AS $$
 BEGIN
 
@@ -217,4 +217,4 @@ $$ LANGUAGE plpgsql;
 CREATE TRIGGER update_balance_unpaid_sum_change
     BEFORE UPDATE ON project_balance_unpaid
     FOR EACH ROW
-    EXECUTE FUNCTION "ry-vue".update_balance_unpaid_sum_change_func();
+    EXECUTE FUNCTION update_balance_unpaid_sum_change_func();
